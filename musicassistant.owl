@@ -1,0 +1,1425 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#"
+     xml:base="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#HasArtist -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#HasArtist"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#HasRating -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#HasRating"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#HasReleasedAlbum -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#HasReleasedAlbum">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#HasArtist"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#HasSong -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#HasSong">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#IsListedinAlbum"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#IsListedinAlbum -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#IsListedinAlbum"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#IsofGenre -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#IsofGenre"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#wasReleasedInYear -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#wasReleasedInYear"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Album -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Album">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#IsofGenre"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Genre"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#HasArtist"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Akon"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#HasArtist"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Eminem"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#HasArtist"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Enrique_Iglesias"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#HasArtist"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Katy_Perry"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#HasArtist"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Lady_Gaga"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#HasArtist"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Michael_Jackson"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#HasArtist"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Shakira"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Artist -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Artist">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#HasReleasedAlbum"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Album"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Disco -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Disco">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Genre"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Pop"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Genre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Genre">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Pop -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Pop">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Genre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Rating -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Rating">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Album"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Song -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Song">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Year -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Year">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Addicted -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Addicted">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Song"/>
+        <IsListedinAlbum rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Seven"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Akon -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Akon">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Artist"/>
+        <HasReleasedAlbum rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Freedom"/>
+        <HasReleasedAlbum rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Konvicted"/>
+        <HasReleasedAlbum rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Trouble"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Bananza -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Bananza">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Song"/>
+        <IsListedinAlbum rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Trouble"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Beautiful -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Beautiful">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Song"/>
+        <IsListedinAlbum rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Relapse"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Best_of_Joy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Best_of_Joy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Song"/>
+        <IsListedinAlbum rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Michael"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Birthday -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Birthday">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Song"/>
+        <IsListedinAlbum rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Prism"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Birthmark -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Birthmark">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Song"/>
+        <IsListedinAlbum rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Freedom"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Blue_Gangsta -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Blue_Gangsta">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Song"/>
+        <IsListedinAlbum rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Xscape"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Blues -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Blues">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Genre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Born_this_Way -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Born_this_Way">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Album"/>
+        <IsofGenre rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Dancepop"/>
+        <HasArtist rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Lady_Gaga"/>
+        <HasRating rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Rate_4"/>
+        <wasReleasedInYear rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#year2011"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Butterflies -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Butterflies">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Song"/>
+        <IsListedinAlbum rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Invincible"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Cheek_to_Cheek -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Cheek_to_Cheek">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Album"/>
+        <IsofGenre rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Jazz"/>
+        <HasArtist rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Lady_Gaga"/>
+        <HasRating rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Rate_2"/>
+        <wasReleasedInYear rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#year2014"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Chicago -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Chicago">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Song"/>
+        <IsListedinAlbum rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Xscape"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Dancepop -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Dancepop">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Pop"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Dare -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Dare">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Song"/>
+        <IsListedinAlbum rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#shakira"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Disco -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Disco">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Disco"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Discopop -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Discopop">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Disco"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Discorock -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Discorock">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Disco"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Electropop -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Electropop">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Pop"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Eminem -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Eminem">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Artist"/>
+        <HasReleasedAlbum rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Encore"/>
+        <HasReleasedAlbum rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Recovery"/>
+        <HasReleasedAlbum rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Relapse"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Empire -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Empire">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Song"/>
+        <IsListedinAlbum rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#shakira"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Encore -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Encore">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Album"/>
+        <HasArtist rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Eminem"/>
+        <IsofGenre rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Hiphop"/>
+        <HasRating rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Rate_3"/>
+        <wasReleasedInYear rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#year2004"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Enrique_Iglesias -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Enrique_Iglesias">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Artist"/>
+        <HasReleasedAlbum rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Escape"/>
+        <HasReleasedAlbum rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Insomaniac"/>
+        <HasReleasedAlbum rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Seven"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Escape -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Escape">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Album"/>
+        <HasArtist rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Enrique_Iglesias"/>
+        <HasRating rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Rate_2"/>
+        <IsofGenre rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#pop"/>
+        <wasReleasedInYear rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#year2001"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Fingerprints -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Fingerprints">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Song"/>
+        <IsListedinAlbum rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#One_of_the_Boys"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Firefly -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Firefly">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Song"/>
+        <IsListedinAlbum rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Cheek_to_Cheek"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Firework -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Firework">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Song"/>
+        <IsListedinAlbum rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Teenage_Dream"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Fool -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Fool">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Song"/>
+        <IsListedinAlbum rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Laundry_Service"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Free -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Free">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Song"/>
+        <IsListedinAlbum rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Seven"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Freedom -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Freedom">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Album"/>
+        <HasArtist rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Akon"/>
+        <IsofGenre rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Hiphop"/>
+        <HasRating rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Rate_4"/>
+        <IsofGenre rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#RnB"/>
+        <IsofGenre rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#pop"/>
+        <wasReleasedInYear rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#year2008"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Ghetto -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Ghetto">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Song"/>
+        <IsListedinAlbum rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Trouble"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Gypsy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Gypsy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Song"/>
+        <IsListedinAlbum rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#She_Wolf"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Hair -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Hair">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Song"/>
+        <IsListedinAlbum rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Born_this_Way"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Heartbreaker -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Heartbreaker">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Song"/>
+        <IsListedinAlbum rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Invincible"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Hello -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Hello">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Song"/>
+        <IsListedinAlbum rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Relapse"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Hero -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Hero">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Song"/>
+        <IsListedinAlbum rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Escape"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Hiphop -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Hiphop">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Genre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Holla_Holla -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Holla_Holla">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Song"/>
+        <IsListedinAlbum rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Freedom"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Hollywood_Tonight -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Hollywood_Tonight">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Song"/>
+        <IsListedinAlbum rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Michael"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#I_Kissed_a_Girl -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#I_Kissed_a_Girl">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Song"/>
+        <IsListedinAlbum rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#One_of_the_Boys"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#I_Wont_Dance -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#I_Wont_Dance">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Song"/>
+        <IsListedinAlbum rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Cheek_to_Cheek"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Insomaniac -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Insomaniac">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Album"/>
+        <HasArtist rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Enrique_Iglesias"/>
+        <IsofGenre rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Latinpop"/>
+        <HasRating rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Rate_5"/>
+        <IsofGenre rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#RnB"/>
+        <IsofGenre rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#pop"/>
+        <wasReleasedInYear rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#year2007"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Invincible -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Invincible">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Album"/>
+        <IsofGenre rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Dancepop"/>
+        <HasArtist rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Michael_Jackson"/>
+        <HasRating rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Rate_4"/>
+        <IsofGenre rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#RnB"/>
+        <IsofGenre rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#pop"/>
+        <wasReleasedInYear rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#year2001"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Jazz -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Jazz">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Genre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Judas -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Judas">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Song"/>
+        <IsListedinAlbum rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Born_this_Way"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Just_Dance -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Just_Dance">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Song"/>
+        <IsListedinAlbum rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#The_Fame"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Katy_Perry -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Katy_Perry">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Artist"/>
+        <HasReleasedAlbum rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#One_of_the_Boys"/>
+        <HasReleasedAlbum rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Prism"/>
+        <HasReleasedAlbum rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Teenage_Dream"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Konvicted -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Konvicted">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Album"/>
+        <HasArtist rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Akon"/>
+        <IsofGenre rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Hiphop"/>
+        <HasRating rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Rate_3"/>
+        <IsofGenre rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#RnB"/>
+        <wasReleasedInYear rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#year2006"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Lady_Gaga -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Lady_Gaga">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Artist"/>
+        <HasArtist rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Born_this_Way"/>
+        <HasArtist rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Cheek_to_Cheek"/>
+        <HasArtist rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#The_Fame"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Latinpop -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Latinpop">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Pop"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Laundry_Service -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Laundry_Service">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Album"/>
+        <IsofGenre rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Poprock"/>
+        <HasRating rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Rate_3"/>
+        <HasArtist rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Shakira"/>
+        <wasReleasedInYear rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#year2001"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Little_Girl -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Little_Girl">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Song"/>
+        <IsListedinAlbum rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Insomaniac"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Loba -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Loba">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Song"/>
+        <IsListedinAlbum rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#She_Wolf"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Locked_Up -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Locked_Up">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Song"/>
+        <IsListedinAlbum rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Trouble"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Lost -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Lost">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Song"/>
+        <IsListedinAlbum rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#One_of_the_Boys"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Loving_You -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Loving_You">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Song"/>
+        <IsListedinAlbum rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Xscape"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Lush_Life -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Lush_Life">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Song"/>
+        <IsListedinAlbum rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Cheek_to_Cheek"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Maybe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Maybe">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Song"/>
+        <IsListedinAlbum rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Escape"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Medicine -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Medicine">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Song"/>
+        <IsListedinAlbum rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#shakira"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Michael -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Michael">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Album"/>
+        <HasArtist rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Michael_Jackson"/>
+        <HasRating rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Rate_2"/>
+        <IsofGenre rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#RnB"/>
+        <IsofGenre rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#pop"/>
+        <wasReleasedInYear rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#year2010"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Michael_Jackson -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Michael_Jackson">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Artist"/>
+        <HasReleasedAlbum rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Invincible"/>
+        <HasReleasedAlbum rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Michael"/>
+        <HasReleasedAlbum rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Xscape"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Miss_You -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Miss_You">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Song"/>
+        <IsListedinAlbum rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Insomaniac"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Monster -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Monster">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Song"/>
+        <IsListedinAlbum rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Michael"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Mosh -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Mosh">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Song"/>
+        <IsListedinAlbum rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Encore"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Not_Afraid -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Not_Afraid">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Song"/>
+        <IsListedinAlbum rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Recovery"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#On_Fire -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#On_Fire">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Song"/>
+        <IsListedinAlbum rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Recovery"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#One_Night_Stand -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#One_Night_Stand">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Song"/>
+        <IsListedinAlbum rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Escape"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#One_of_the_Boys -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#One_of_the_Boys">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Album"/>
+        <HasArtist rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Katy_Perry"/>
+        <IsofGenre rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Poprock"/>
+        <HasRating rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Rate_3"/>
+        <wasReleasedInYear rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#year2008"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Papparazi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Papparazi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Song"/>
+        <IsListedinAlbum rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#The_Fame"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Paul -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Paul">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Song"/>
+        <IsListedinAlbum rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Encore"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Peacock -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Peacock">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Song"/>
+        <IsListedinAlbum rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Teenage_Dream"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Pearl -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Pearl">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Song"/>
+        <IsListedinAlbum rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Teenage_Dream"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Poker_Face -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Poker_Face">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Song"/>
+        <IsListedinAlbum rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#The_Fame"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Poprock -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Poprock">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Pop"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Powerpop -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Powerpop">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Pop"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Prism -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Prism">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Album"/>
+        <IsofGenre rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Dancepop"/>
+        <IsofGenre rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Disco"/>
+        <IsofGenre rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Hiphop"/>
+        <HasArtist rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Katy_Perry"/>
+        <IsofGenre rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Powerpop"/>
+        <HasRating rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Rate_3"/>
+        <wasReleasedInYear rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#year2013"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Puke -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Puke">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Song"/>
+        <IsListedinAlbum rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Encore"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Push -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Push">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Song"/>
+        <IsListedinAlbum rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Insomaniac"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Rap -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Rap">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Genre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Rate_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Rate_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Rating"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Rate_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Rate_2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Rating"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Rate_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Rate_3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Rating"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Rate_4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Rate_4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Rating"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Rate_5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Rate_5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Rating"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Recovery -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Recovery">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Album"/>
+        <HasArtist rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Eminem"/>
+        <IsofGenre rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Hiphop"/>
+        <HasRating rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Rate_2"/>
+        <wasReleasedInYear rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#year2010"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Reggae -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Reggae">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Genre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Relapse -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Relapse">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Album"/>
+        <HasArtist rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Eminem"/>
+        <IsofGenre rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Hiphop"/>
+        <HasRating rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Rate_5"/>
+        <wasReleasedInYear rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#year2009"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Right_Now_Na -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Right_Now_Na">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Song"/>
+        <IsListedinAlbum rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Freedom"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#RnB -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#RnB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Genre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Roar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Roar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Song"/>
+        <IsListedinAlbum rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Prism"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Rules -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Rules">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Song"/>
+        <IsListedinAlbum rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Laundry_Service"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Say_It -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Say_It">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Song"/>
+        <IsListedinAlbum rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Seven"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Seven -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Seven">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Album"/>
+        <HasArtist rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Enrique_Iglesias"/>
+        <HasRating rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Rate_3"/>
+        <IsofGenre rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#pop"/>
+        <wasReleasedInYear rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#year2003"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Shake_Down -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Shake_Down">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Song"/>
+        <IsListedinAlbum rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Konvicted"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Shakira -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Shakira">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Artist"/>
+        <HasReleasedAlbum rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Laundry_Service"/>
+        <HasReleasedAlbum rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#She_Wolf"/>
+        <HasReleasedAlbum rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#shakira"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#She_Wolf -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#She_Wolf">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Album"/>
+        <IsofGenre rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Electropop"/>
+        <HasRating rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Rate_2"/>
+        <HasArtist rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Shakira"/>
+        <wasReleasedInYear rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#year2009"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Smack_That -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Smack_That">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Song"/>
+        <IsListedinAlbum rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Konvicted"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#So_Bad -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#So_Bad">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Song"/>
+        <IsListedinAlbum rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Recovery"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Spy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Spy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Song"/>
+        <IsListedinAlbum rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#She_Wolf"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Teenage_Dream -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Teenage_Dream">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Album"/>
+        <IsofGenre rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Disco"/>
+        <IsofGenre rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Hiphop"/>
+        <HasArtist rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Katy_Perry"/>
+        <HasRating rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Rate_4"/>
+        <IsofGenre rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#pop"/>
+        <wasReleasedInYear rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#year2010"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#The_Fame -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#The_Fame">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Album"/>
+        <IsofGenre rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Dancepop"/>
+        <HasReleasedAlbum rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Lady_Gaga"/>
+        <HasRating rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Rate_4"/>
+        <wasReleasedInYear rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#year2008"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#The_Rain -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#The_Rain">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Song"/>
+        <IsListedinAlbum rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Konvicted"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Trouble -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Trouble">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Album"/>
+        <HasArtist rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Akon"/>
+        <IsofGenre rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Hiphop"/>
+        <HasRating rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Rate_2"/>
+        <IsofGenre rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Reggae"/>
+        <IsofGenre rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#RnB"/>
+        <wasReleasedInYear rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#year2004"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Unbreakable -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Unbreakable">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Song"/>
+        <IsListedinAlbum rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Invincible"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Unconditionally -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Unconditionally">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Song"/>
+        <IsListedinAlbum rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Prism"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Underground -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Underground">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Song"/>
+        <IsListedinAlbum rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Relapse"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Whenever_Wherever -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Whenever_Wherever">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Song"/>
+        <IsListedinAlbum rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Laundry_Service"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Worldbeat -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Worldbeat">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Genre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Xscape -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Xscape">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Album"/>
+        <HasArtist rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Michael_Jackson"/>
+        <HasRating rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Rate_5"/>
+        <IsofGenre rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#RnB"/>
+        <IsofGenre rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#pop"/>
+        <wasReleasedInYear rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#year2014"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#You_and_I -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#You_and_I">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Song"/>
+        <IsListedinAlbum rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Born_this_Way"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#pop -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#pop">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Pop"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#shakira -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#shakira">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Album"/>
+        <HasRating rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Rate_4"/>
+        <HasArtist rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Shakira"/>
+        <IsofGenre rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#pop"/>
+        <wasReleasedInYear rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#year2014"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#year2001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#year2001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Year"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#year2002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#year2002">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Year"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#year2003 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#year2003">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Year"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#year2004 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#year2004">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Year"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#year2005 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#year2005">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Year"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#year2006 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#year2006">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Year"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#year2007 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#year2007">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Year"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#year2008 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#year2008">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Year"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#year2009 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#year2009">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Year"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#year2010 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#year2010">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Year"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#year2011 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#year2011">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Year"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#year2012 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#year2012">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Year"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#year2013 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#year2013">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Year"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#year2014 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#year2014">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Year"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Artist"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Genre"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Song"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/rschet/ontologies/2014/10/MusicAssistant#Year"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+
